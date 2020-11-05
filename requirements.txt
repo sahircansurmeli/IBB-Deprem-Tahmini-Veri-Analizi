@@ -1,4 +1,4 @@
 requests
 lxml
 pdftotext
-camelot
+camelot-py
