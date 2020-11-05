@@ -57,6 +57,7 @@ def main():
     files = get_file_names()
     main_object = {}
     for filename in files:
+        print("Processing", filename)
         with open(filename, "rb") as f:
             pdf = pdftotext.PDF(f)
 
@@ -68,6 +69,7 @@ def main():
             "BİNA HASARI": convert_to_object(tables[0].data),
             "CAN KAYBI": convert_to_object(tables[1].data)
         }
+        print("Processing completed", filename)
 
     write_to_json(main_object)
     return main_object
