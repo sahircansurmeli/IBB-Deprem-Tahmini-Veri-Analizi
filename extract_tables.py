@@ -14,6 +14,7 @@ def get_page_numbers(pdf):
             page = pdf[i]
             break
 
+    print(page)
     page = [l.strip() for l in page.split("\n")]
 
     page_nums = [-1, -1]
@@ -42,14 +43,14 @@ def convert_to_object(data):
     for r in data[1:]:
         sub_obj = {}
         for i in range(1, len(r)):
-            sub_obj[col_names[i]] = int(r[i].replace(".", ""))
+            sub_obj[col_names[i]] = r[i].replace(".", "")
         obj[r[0]] = sub_obj
 
     return obj
 
 
 def write_to_json(obj):
-    with open("data.json", "w") as f:
+    with open("data.json", "w", encoding="utf-8") as f:
         f.write(json.dumps(obj, indent=4, ensure_ascii=False))
 
 
