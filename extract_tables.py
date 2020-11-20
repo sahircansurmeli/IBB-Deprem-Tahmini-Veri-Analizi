@@ -64,7 +64,7 @@ def main():
 
         page_nums = get_page_numbers(pdf)
 
-        tables = camelot.read_pdf(filename, pages=",".join(page_nums), process_background=True)
+        tables = camelot.read_pdf(f"../Kitapçıklar/{filename}", pages=",".join(page_nums), process_background=True)
 
         main_object[filename[:-4]] = {
             "BİNA HASARI": convert_to_object(tables[0].data),

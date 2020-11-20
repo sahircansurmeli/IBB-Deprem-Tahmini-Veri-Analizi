@@ -9,6 +9,6 @@ links = doc.xpath("//ul/li/a[contains(@href, '.pdf') and not(contains(@href, 'TS
 for l in links:
     print("Start download " + l.attrib["title"])
     download = requests.get(l.attrib["href"])
-    with open(f"{l.attrib['title']}.pdf", "wb") as file:
+    with open(f"../Kitapçıklar/{l.attrib['title']}.pdf", "wb") as file:
         file.write(download.content)
     print("Download completed " + l.attrib["title"])
