@@ -11,9 +11,8 @@ Verilere __data.json__ dosyasından ulaşabilirsiniz.
 ## Dosyalar
 | Dosyalar             | İşlevleri
 | -------------------- | ---------
+| data.json            | Verilerin son hali
 | download_booklets.py | https://depremzemin.ibb.istanbul/guncelcalismalarimiz/ web sitesinden tüm ilçelerin pdf formatındaki kitapçıklarını indirir
 | extract_tables.py    | Kitapçıklardan gerekli verileri toplayıp JSON formatına getirir
 | requirements.txt     | Gerekli python kütüphaneleri
-| data.json            | Verilerin ilk hali (pdf dosyalarından metin çıkarılırken oluşan karakter hataları içerir)
 | correct_data.py      | Verileri düzeltir
-| correct_data.json    | Verilerin son hali
